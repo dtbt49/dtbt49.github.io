@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Structure</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Times New Roman", Times, serif;
+      background:#e9e9e9;
+      color:#000;
+    }
+
+    /* HEADER */
+    header{
+      background:#dcdcdc;
+      border:1px solid #c7c7c7;
+      margin:12px;
+      padding:12px 16px;
+    }
+    header .branding{
+      display:flex; align-items:center; gap:14px; justify-content:center;
+    }
+    header img{height:70px; object-fit:contain}
+    header h1{
+      margin:0;
+      font-size:28px;
+      text-decoration:underline;
+      color:#0645ad; /* giống màu link trong hình */
+      font-weight:700;
+    }
+
+    /* NAV – căn giữa 4 mục, 2 mục đầu màu tím */
+    nav{
+      background:#dcdcdc;
+      border:1px solid #c7c7c7;
+      margin:0 12px 12px;
+      padding:10px 16px;
+      text-align:center;
+    }
+    nav a{
+      margin:0 15px; text-decoration:none; font-size:16px;
+      color:#0645ad;
+    }
+    nav a:nth-child(1), nav a:nth-child(2){ color:#800080; font-weight:bold; }
+
+    /* MAIN: 2 cột như ảnh */
+    main{
+      display:grid; grid-template-columns:1fr 1fr; gap:12px;
+      margin:0 12px 12px;
+    }
+    section, aside{
+      background:#dcdcdc; border:1px solid #c7c7c7; padding:10px;
+    }
+    hgroup h2{ margin:0 0 10px; font-size:22px; font-weight:700; }
+
+    article{
+      background:#e5e5e5; border:1px solid #c7c7c7; padding:8px;
+    }
+    article h3{
+      margin:0 0 8px; font-size:16px; font-weight:700; text-decoration:underline;
+    }
+    article p{ margin:0 0 10px; text-align:justify; }
+
+    figure{ margin:0; border:1px solid #c7c7c7; background:#f5f5f5; }
+    figure img{ width:100%; height:210px; object-fit:cover; display:block; }
+    figcaption{ display:none; } /* có figcaption theo yêu cầu, nhưng ẩn để trùng hình bạn muốn */
+
+    /* Responsive */
+    @media (max-width:900px){ main{ grid-template-columns:1fr } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="branding">
+      <img src="https://sdh.ueh.edu.vn/ckfinder/images/BIT_logo.png" alt="Logo Khoa BIT">
+      <h1>HTML5 Structure</h1>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav aria-label="Chương trình đào tạo">
+    <a href="#">Chương trình Đại học</a>
+    <a href="#">CT Liên thông Đại học</a>
+    <a href="#">Chương trình Sau đại học</a>
+    <a href="#">Chương trình quốc tế</a>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <!-- Cột trái -->
+    <section aria-labelledby="dh-title">
+      <hgroup>
+        <h2 id="dh-title">Chương trình Đại học</h2>
+      </hgroup>
+
+      <article>
+        <h3><a href="#">Hệ thống hoạch định nguồn lực doanh nghiệp (ERP)</a></h3>
+        <p>
+          Nhu cầu xã hội Hoạch định các nguồn lực một cách hiệu quả để nhắm đến mục tiêu giảm chi phí,
+          tăng sức cạnh tranh là một vấn đề mà mọi doanh nghiệp luôn phải đối mặt, nhất là trong thời kỳ hội nhập hiện nay.
+          Hệ thống hoạch định nguồn lực doanh nghiệp (ERP) […]
+        </p>
+
+        <figure>
+          <img src="https://www.axiomsoftwaresolutions.com/images/inner-banner/erp-banner.jpg" alt="ERP Banner">
+          <figcaption>Hình minh họa chương trình ERP</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <!-- Cột phải -->
+    <aside aria-labelledby="lk-title">
+      <hgroup>
+        <h2 id="lk-title">Liên kết</h2>
+      </hgroup>
+
+      <article>
+        <h3><a href="#">Hệ thống thông tin kinh doanh</a></h3>
+
+        <figure>
+          <img src="https://cafefcdn.com/zoom/700_438/2020/photo1592619426786-1592619426902-crop-15926194574281690353035.jpg" alt="Hệ thống Thông tin Kinh doanh">
+          <figcaption>Hình minh họa HTTT Kinh doanh</figcaption>
+        </figure>
+
+        <p>
+          Nhu cầu xã hội Hiện nay, ứng dụng công nghệ trong điều hành doanh nghiệp đang được các nhà quản trị quan tâm…
+        </p>
+      </article>
+    </aside>
+  </main>
+
+</body>
+</html>

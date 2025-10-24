@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 7 - Bảng nghệ thuật & giải trí</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif; /* đổi lại font chữ giống hình */
+      display: flex;
+      justify-content: center; /* căn giữa ngang */
+      align-items: center;     /* căn giữa dọc */
+      height: 100vh;
+      background-color: #ffffff;
+      margin: 0;
+    }
+
+    table {
+      border-collapse: collapse;
+      text-align: center; /* căn giữa toàn bộ nội dung bảng */
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 6px 16px;
+    }
+
+    .big-title {
+      color: blue;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .col-head {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <th class="big-title" colspan="2">Mạng nghệ thuật &amp; giải trí</th>
+    </tr>
+    <tr>
+      <th class="col-head">Phim</th>
+      <th class="col-head">Ngày chiếu</th>
+    </tr>
+    <tr>
+      <td>Sherlock Holmes</td>
+      <td>Thứ hai</td>
+    </tr>
+    <tr>
+      <td>Lovejoy</td>
+      <td>Thứ hai</td>
+    </tr>
+  </table>
+
+</body>
+</html>

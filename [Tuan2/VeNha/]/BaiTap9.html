@@ -1,0 +1,94 @@
+<form id="survey" action="#" method="post" novalidate>
+  <!-- Câu 1: Màu hợp lệ (cho phép nhập #RRGGBB) -->
+  <div class="q">
+    <label for="q1">Câu 1 – Màu yêu thích (định dạng #RRGGBB):</label>
+    <input
+      id="q1"
+      name="favoriteColor"
+      type="text"
+      placeholder="#ff6600"
+      required
+      pattern="^#([A-Fa-f0-9]{6})$"
+      title="Nhập mã màu dạng #RRGGBB, ví dụ #1A2B3C"
+      oninvalid="this.setCustomValidity('Vui lòng nhập mã màu hợp lệ dạng #RRGGBB, ví dụ #1A2B3C')"
+      oninput="this.setCustomValidity('')"
+    />
+    <small>Ví dụ: <code>#1a2b3c</code></small>
+  </div>
+
+  <!-- Câu 2: Số nguyên ≥ 20 -->
+  <div class="q">
+    <label for="q2">Câu 2 – Số nguyên lớn hơn hoặc bằng 20:</label>
+    <input
+      id="q2"
+      name="intNumber"
+      type="number"
+      placeholder="Nhập số ≥ 20"
+      inputmode="numeric"
+      step="1"
+      min="20"
+      required
+      oninvalid="this.setCustomValidity('Vui lòng nhập số nguyên ≥ 20')"
+      oninput="this.setCustomValidity('')"
+    />
+  </div>
+
+  <!-- Câu 3: Bất kỳ (vẫn phải required + có placeholder) -->
+  <div class="q">
+    <label for="q3">Câu 3 – Họ và tên:</label>
+    <input
+      id="q3"
+      name="fullName"
+      type="text"
+      placeholder="Ví dụ: Nguyễn Văn A"
+      required
+      oninvalid="this.setCustomValidity('Vui lòng nhập họ và tên')"
+      oninput="this.setCustomValidity('')"
+    />
+  </div>
+
+  <!-- Câu 4: Ngày hợp lệ -->
+  <div class="q">
+    <label for="q4">Câu 4 – Ngày sinh:</label>
+    <input
+      id="q4"
+      name="datePlanned"
+      type="date"
+      placeholder="dd/mm/yyyy"
+      required
+      oninvalid="this.setCustomValidity('Vui lòng chọn ngày hợp lệ')"
+      oninput="this.setCustomValidity('')"
+    />
+  </div>
+
+  <!-- Câu 5: URL hợp lệ -->
+  <div class="q">
+    <label for="q5">Câu 5 – Trang web của bạn (URL):</label>
+    <input
+      id="q5"
+      name="website"
+      type="url"
+      placeholder="https://example.com"
+      required
+      pattern="https?://.+"
+      title="URL phải bắt đầu bằng http:// hoặc https://"
+      oninvalid="this.setCustomValidity('Vui lòng nhập URL hợp lệ, bắt đầu bằng http:// hoặc https://')"
+      oninput="this.setCustomValidity('')"
+    />
+  </div>
+
+  <button type="submit">Gửi</button>
+</form>
+
+<!-- (Tuỳ chọn) CSS nhẹ cho đẹp mắt, có thể bỏ nếu file gốc đã có CSS -->
+<style>
+  form { max-width: 560px; margin: 24px auto; font-family: Arial, sans-serif; }
+  .q { margin-bottom: 14px; }
+  label { display:block; font-weight:600; margin-bottom:6px; }
+  input { width:100%; padding:10px 12px; border:1px solid #ccc; border-radius:6px; font-size:14px; }
+  input:invalid { border-color:#d9534f; }
+  input:valid { border-color:#28a745; }
+  small { color:#666; }
+  button { margin-top: 8px; padding:10px 14px; border:none; background:#0b6efd; color:#fff; border-radius:6px; cursor:pointer; }
+  button:hover { opacity:.92; }
+</style>
