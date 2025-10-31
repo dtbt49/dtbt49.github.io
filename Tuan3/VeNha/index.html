@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bài tập về nhà - Tuần 2</title>
+  <style>
+    :root { --accent:#0b6efd }
+    *{box-sizing:border-box}
+    body{
+      font-family: "Times New Roman", serif;
+      margin:0;
+      background:#f5f6f7;
+      color:#222;
+      display:flex;
+      justify-content:center;
+      padding:32px 16px;
+    }
+    .wrap{ width:min(900px, 100%); }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background:#fff;
+      padding:20px 24px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      margin-bottom:22px;
+    }
+    .avatar{
+      width:120px; height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid var(--accent);
+    }
+    h1{ margin:0 0 6px; font-size:24px; color:var(--accent); }
+    .meta{ margin:4px 0; color:#444; line-height:1.6; font-size:16px; }
+
+    .grid{
+      display:grid;
+      gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      margin-top:20px;
+    }
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    .card h3{
+      margin:0 0 12px;
+      font-size:18px;
+      color:#333;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:6px;
+    }
+    .list a{
+      display:block;
+      padding:10px 12px;
+      border-radius:10px;
+      margin:8px 0;
+      background:#f1f4f9;
+      text-decoration:none;
+      color:#0b5ed7;
+      font-weight:600;
+      transition:0.2s;
+    }
+    .list a:hover{ background:#e0ebff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Thông tin cá nhân -->
+    <header>
+      <div>
+        <h1>Bài tập về nhà - Tuần 3</h1>
+        <p class="meta">
+          <strong>Họ và tên:</strong> Đào Thanh Bảo Trâm <br>
+          <strong>MSSV:</strong> 31231025658 <br>
+          <strong>Lớp:</strong> 25C1INF50902704 <br>
+          <strong>Môn học:</strong> Phát triển ứng dụng thương mại điện tử
+        </p>
+      </div>
+    </header>
+
+    <!-- Liên kết bài tập -->
+    <section class="grid">
+      <article class="card">
+        <h3>Các bài tập</h3>
+        <div class="list">
+          <a href="./BaiTap2.html">Bài tập 2</a>
+          <a href="./BaiTap4.html">Bài tập 4</a>
+          <a href="./BaiTap5.html">Bài tập 5</a>
+          <a href="./BaiTap6.html">Bài tập 6</a>
+          <a href="./BaiTap7.html">Bài tập 7</a>
+          <a href="./BaiTap8.html">Bài tập 8</a>
+          <a href="./BaiTap9.html">Bài tập 9</a>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

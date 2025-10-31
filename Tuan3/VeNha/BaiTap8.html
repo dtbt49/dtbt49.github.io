@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập 8</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<style>
+    /* (i) Khung chứa lớn (wrapper) */
+#root {
+  width: 1024px;          /* khung lớn 1024px */
+  margin: 0 auto;         /* canh giữa trang */
+  text-align: center;     /* canh giữa */
+}
+
+/* (ii) site-header (thanh tiêu đề) */
+#site-header {
+  text-align: center;                     /* canh giữa chữ */
+  margin: 20px 0;                         /* khoảng cách trên dưới */
+  background: #cfcfcf url('../imgs/batman-logo.png') no-repeat center left; /* nền có màu + hình */
+  color: #222;                            /* màu chữ */
+  text-shadow: 1px 1px 2px #fff;          /* đổ bóng chữ cho nổi */
+  padding: 10px 0;                        /* khoảng cách trong */
+}
+
+/* (iii) li trong superheroes */
+.superheroes li {
+  width: 150px;            /* độ rộng mỗi khung ảnh */
+  display: inline-block;   /* nằm ngang */
+  position: relative;      /* để định vị các phần tử con (a, strong) */
+  margin: 5px;             /* khoảng cách giữa các ảnh */
+  transition: all 0.3s;    /* mượt khi hover */
+}
+
+/* (iv) Hình trong superheroes */
+.superheroes img {
+  border: 1px solid grey;  /* viền mảnh quanh ảnh */
+  max-width: 100%;         /* ảnh không vượt khỏi khung li */
+  border-radius: 10px;      /* bo góc nhẹ */
+}
+
+/* (v) Thẻ a trong superheroes */
+.superheroes a {
+  display: none;               /* ẩn mặc định */
+  width: 100%;                 /* chiếm hết chiều ngang */
+  color: white;                 /* chữ trắng */
+  text-decoration: none;       /* bỏ gạch chân */
+  background-color: #333;      /* nền xám */
+  position: absolute;          /* đặt đè lên ảnh */
+  bottom: 0;                   /* nằm ở dưới cùng */
+  left: 0;
+  padding: 8px 0;
+  border-radius: 0 0 10px 10px;  /* bo góc dưới */
+  opacity: 0.8;                /* hơi trong suốt */
+}
+
+/* =============================
+   (vi) Hover hiệu ứng
+   ============================= */
+
+/* (1) Khi rê chuột vào li: hiển thị link "Read more" */
+.superheroes li:hover a {
+  display: block;             /* hiện link */
+  text-decoration: underline; /* hiện gạch chân chữ */
+}
+
+/* (2) Khi rê chuột vào li: tăng kích thước ảnh */
+.superheroes li:hover {
+  width: 170px;             /* tăng nhẹ chiều rộng khi hover */
+}
+
+/* Hiển thị tên hero trên ảnh */
+.hero-header {
+  position: absolute;       /* đặt đè lên ảnh */
+  top: 10px;                /* cách viền trên */
+  left: 10px;               /* cách viền trái */
+  color: #fff;              /* chữ trắng */
+  text-shadow: 1px 1px 3px #000; /* đổ bóng chữ */
+}
+</style>
+
+<body>
+    <div id="root">
+        <h1 id="site-header"><span>The Bat family<span></h1>
+        <ul class="superheroes">
+            <li>
+                <strong class="hero-header">Batman</strong>
+                <img src="imgs/superhero-1.jpg" alt="">
+                <a href="https://en.wikipedia.org/wiki/Batman">Read more</a>
+            </li>
+            <li>
+                <strong class="hero-header">Batwing</strong>
+                <img src="imgs/superhero-2.jpg" alt="">
+                <a href="https://en.wikipedia.org/wiki/Batwing_(DC_Comics)">Read more</a>
+            </li>
+            <li>
+                <strong class="hero-header">Batgirl</strong>
+                <img src="imgs/superhero-3.jpg" alt="">
+                <a href="https://en.wikipedia.org/wiki/Batgirl">Read more</a>
+            </li>
+            <li>
+                <strong class="hero-header">Nightwing</strong>
+                <img src="imgs/superhero-4.jpg" alt="">
+                <a href="https://en.wikipedia.org/wiki/Nightwing">Read more</a>
+            </li>
+            <li>
+                <strong class="hero-header">Red Robin</strong>
+                <img src="imgs/superhero-5.jpg" alt="">
+                <a href="https://en.wikipedia.org/wiki/Red_Robin_(comics)">Read more</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

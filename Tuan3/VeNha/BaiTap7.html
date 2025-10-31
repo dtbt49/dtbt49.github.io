@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bài Tập 7</title>
+<style>
+/* --- Khung bao ngoài toàn bộ layout --- */
+#wrapper {
+  width: 600px;               /* Độ rộng tổng thể của trang */
+  margin: 20px auto;          /* Căn giữa trang theo chiều ngang */
+  border: 2px solid black;    /* Viền đen bao quanh toàn bộ wrapper */
+  box-sizing: border-box;     /* Tính cả viền và padding vào kích thước tổng */
+}
+
+/* --- Phần header (đầu trang) --- */
+header {
+  height: 80px;               /* Chiều cao vùng header */
+  border: 1px solid black;    /* Viền đen bao quanh header */
+  margin: 10px;               /* Khoảng cách so với viền wrapper */
+}
+
+/* --- Thanh điều hướng bên trái (nav) --- */
+nav {
+  width: 150px;               /* Chiều rộng cột nav */
+  height: 200px;              /* Chiều cao cột nav */
+  border: 1px solid black;    /* Viền đen quanh nav */
+  float: left;                /* Cho nav nổi sang trái */
+  margin-left: 10px;          /* Cách mép trái wrapper 10px */
+  margin-bottom: 10px;        /* Tạo khoảng cách với footer */
+}
+
+/* --- Phần nội dung chính (main) --- */
+main {
+  height: 200px;              /* Chiều cao main bằng nav */
+  border: 1px solid black;    /* Viền đen quanh main */
+  margin-left: 170px;         /* Chừa chỗ trống cho nav (150px + 20px lề) */
+  margin-right: 10px;         /* Cách mép phải wrapper 10px */
+  margin-bottom: 10px;        /* Cách footer 10px */
+}
+
+/* --- Phần chân trang (footer) --- */
+footer {
+  clear: both;                /* Đẩy footer xuống dưới sau nav và main */
+  height: 60px;               /* Chiều cao footer */
+  border: 1px solid black;    /* Viền đen quanh footer */
+  margin: 10px;               /* Khoảng cách so với mép wrapper */
+}
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+  <header>header</header>  <!-- phần đầu trang -->
+  <nav>nav</nav>           <!-- thanh điều hướng bên trái -->
+  <main>main</main>        <!-- nội dung chính bên phải -->
+  <footer>footer</footer>  <!-- phần chân trang -->
+</div>
+
+</body>
+</html>

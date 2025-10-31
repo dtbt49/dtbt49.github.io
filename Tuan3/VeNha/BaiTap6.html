@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<style>
+/* Khung tổng và canh giữa */
+.portfolio{
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tiêu đề MY PORTFOLIO + gạch nhấn */
+.portfolio h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 24px 0 10px;
+  font-size: 36px;
+}
+.portfolio h2::after{
+  content:"";
+  display:block;
+  width: 60px;           /* độ dài gạch nhấn */
+  height: 4px;           /* độ dày gạch nhấn */
+  background:#00b3b3;    /* màu xanh nhấn */
+  margin: 10px auto 0;   /* đặt gạch ở giữa */
+  border-radius: 2px;
+}
+
+/* Thanh tab */
+.list-tab{
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 20px;
+  text-align: center;           /* canh giữa các tab */
+}
+.list-tab li{
+  display: inline-block;        /* nằm ngang */
+  margin: 0 12px;
+}
+.list-tab a{
+  text-decoration: none;        /* bỏ gạch chân */
+  color: #666;                  /* xám như hình */
+  font-weight: 600;
+}
+.list-tab li:first-child a{     /* All được tô màu nổi bật */
+  color: #00b3b3;
+}
+.list-tab a:hover{
+  color:#00b3b3;
+}
+
+/* Lưới ảnh 3 cột */
+.galerry{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;                    /* khoảng cách giữa các ảnh */
+}
+.galerry li a{ display:block; }
+.galerry img{
+  width: 100%;
+  height: auto;
+  display: block;               /* bỏ khoảng trắng dưới ảnh inline */
+}
+</style>
+</head>
+<body>
+<section class="portfolio">
+  <h2>MY PORTFOLIO</h2>
+
+  <ul class="list-tab">
+    <li><a href="./">All</a></li>
+    <li><a href="./">Web App</a></li>
+    <li><a href="./">UI/UX</a></li>
+    <li><a href="./">Graphics Design</a></li>
+    <li><a href="./">Mobile App</a></li>
+    <li><a href="./">Branding</a></li>
+    <li><a href="./">Marketing</a></li>
+  </ul>
+
+  <ul class="galerry">
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+    <li><a href="./"><img src=" https://hocwebchuan.com/exercises/images/img_350x260.png" alt=""></a></li>
+  </ul>
+</section>
+</body>
+</html>
