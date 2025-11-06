@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bài tập về nhà - Tuần 4</title>
+  <style>
+    :root { --accent:#0b6efd }
+    *{box-sizing:border-box}
+    body{
+      font-family: "Times New Roman", serif;
+      margin:0;
+      background:#f5f6f7;
+      color:#222;
+      display:flex;
+      justify-content:center;
+      padding:32px 16px;
+      animation: fadeIn 1.2s ease-out; /* hiệu ứng xuất hiện toàn trang */
+    }
+
+    /* 🔹 Animation chung */
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes glow {
+      0%,100% { text-shadow:0 0 5px var(--accent); }
+      50% { text-shadow:0 0 20px var(--accent); }
+    }
+    @keyframes float {
+      0%,100% { transform:translateY(0); }
+      50% { transform:translateY(-6px); }
+    }
+
+    .wrap{ width:min(900px, 100%); }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background:#fff;
+      padding:20px 24px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      margin-bottom:22px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-size:24px;
+      color:var(--accent);
+      animation: glow 2s infinite alternate; /* tiêu đề phát sáng nhịp */
+    }
+
+    .meta{ margin:4px 0; color:#444; line-height:1.6; font-size:16px; }
+
+    .grid{
+      display:grid;
+      gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      margin-top:20px;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:12px;
+      padding:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 1.4s ease-out;
+    }
+
+    /* 🔹 Hiệu ứng khi hover card */
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 22px rgba(0,0,0,.15);
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .card h3{
+      margin:0 0 12px;
+      font-size:18px;
+      color:#333;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:6px;
+    }
+
+    .list a{
+      display:block;
+      padding:10px 12px;
+      border-radius:10px;
+      margin:8px 0;
+      background:#f1f4f9;
+      text-decoration:none;
+      color:#0b5ed7;
+      font-weight:600;
+      transition:0.3s;
+      animation: fadeIn 1s ease;
+    }
+
+    /* 🔹 Hover link có hiệu ứng đổi màu + phóng nhẹ */
+    .list a:hover{
+      background:#e0ebff;
+      transform:scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Thông tin cá nhân -->
+    <header>
+      <div>
+        <h1>Bài tập về nhà - Tuần 4</h1>
+        <p class="meta">
+          <strong>Họ và tên:</strong> Đào Thanh Bảo Trâm <br>
+          <strong>MSSV:</strong> 31231025658 <br>
+          <strong>Lớp:</strong> 25C1INF50902704 <br>
+          <strong>Môn học:</strong> Phát triển ứng dụng thương mại điện tử
+        </p>
+      </div>
+    </header>
+
+    <!-- Liên kết bài tập -->
+    <section class="grid">
+      <article class="card">
+        <h3>Các bài tập</h3>
+        <div class="list">
+          <a href="./BaiTap1.html">Bài tập 1</a>
+          <a href="./BaiTap2.html">Bài tập 2</a>
+          <a href="./BaiTap3.html">Bài tập 3</a>
+        </div>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
